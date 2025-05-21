@@ -1,0 +1,137 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #fff7e6, #f0e3be);
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.section {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  display: none;
+  animation: fadeIn 1s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+h1, h2 {
+  color: #2b3d5c;
+}
+
+.article-box, .puzzle-box {
+  background: #f8f9fc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.puzzle-box {
+  background: #ffffff;
+  border: 1px solid #dcdce0;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+select, button, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+button {
+  background-color: #2b3d5c;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #405579;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.confetti::after {
+  content: '🎊🎉🎊🎉🎊';
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  animation: pop 1s infinite alternate;
+}
+
+@keyframes pop {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(1.2); opacity: 0.6; }
+}
+
+.drag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.draggable {
+  padding: 15px;
+  background-color: #e0c097;
+  border: 2px solid #8b5e3c;
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: #fdf2d0;
+  border: 2px dashed #b8860b;
+  border-radius: 10px;
+  min-height: 250px;
+  margin-top: 20px;
+}
+
+.correct {
+  background-color: #c1e1c1;
+}
+
+.wrong {
+  background-color: #f8d7da;
+}

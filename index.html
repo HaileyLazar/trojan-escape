@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trojan War Escape Room</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Start Page -->
+    <div class="section active start-section" id="start">
+      <h1>⚔️ Trojan War Escape Room</h1>
+      <p>Welcome, brave historian! Explore ancient clues, solve puzzles, and escape the myth and mystery of the Trojan War!</p>
+      <button onclick="startGame()">Start</button>
+    </div>
+
+    <!-- Puzzle 1 -->
+    <div class="section" id="puzzle1">
+      <h2>🧠 Puzzle 1: Literary vs Historical</h2>
+      <div class="article-box">
+        <p>
+          The story of the Trojan War blends myth and reality. According to Greek mythology, the war began when Paris, a Trojan prince, abducted Helen, the wife of Menelaus, king of Sparta. This led to a massive Greek expedition to Troy, which culminated in a ten-year siege. The tale is best known through Homer’s epic poems—the Iliad and Odyssey—written centuries later. While these texts capture the drama, heroism, and divine interventions of the war, historians look for evidence elsewhere. Archaeological digs at Hisarlik in modern Turkey, identified as ancient Troy, reveal layers of destruction around 1200 BCE. This aligns with the period of widespread conflict known as the Bronze Age Collapse, suggesting a historical basis for the myth.
+        </p>
+        <img src="horse.jpg" alt="Trojan Horse" />
+      </div>
+      <div class="puzzle-box">
+        <!-- Quiz Questions -->
+        <label>1. "Achilles' wrath led to great suffering."
+          <select id="q1">
+            <option value="">--Choose--</option>
+            <option value="Literary">Literary</option>
+            <option value="Historical">Historical</option>
+          </select>
+        </label>
+        <label>2. "Ruins of Troy show signs of fire damage around 1200 BCE."
+          <select id="q2">
+            <option value="">--Choose--</option>
+            <option value="Literary">Literary</option>
+            <option value="Historical">Historical</option>
+          </select>
+        </label>
+        <label>3. "Zeus debated whether to intervene in battle."
+          <select id="q3">
+            <option value="">--Choose--</option>
+            <option value="Literary">Literary</option>
+            <option value="Historical">Historical</option>
+          </select>
+        </label>
+        <label>4. "Wilusa is referenced in Hittite texts."
+          <select id="q4">
+            <option value="">--Choose--</option>
+            <option value="Literary">Literary</option>
+            <option value="Historical">Historical</option>
+          </select>
+        </label>
+        <button onclick="checkAnswers1()">Check Answers</button>
+        <p id="result1"></p>
+      </div>
+    </div>
+
+    <!-- Puzzle 2 -->
+    <div class="section" id="puzzle2">
+      <h2>🧩 Puzzle 2: Myth vs Reality</h2>
+      <div class="article-box">
+        <p><strong>Quick Read:</strong> Over time, the myths surrounding the Trojan War grew richer. The most famous is the story of the Trojan Horse—a cunning Greek ploy to infiltrate the city. Legends also describe how gods like Athena, Apollo, and Zeus played major roles in shaping the war’s outcomes. However, archaeological evidence doesn’t support these supernatural claims. Instead, historical references such as Hittite tablets mention a city called Wilusa (likely Troy) and conflicts in the region. The real conflict may have been a struggle for control over trade routes or political power in Anatolia. This puzzle challenges you to separate enduring myths from the facts archaeology and ancient documents reveal.</p>
+        <img src="fight.jpg" alt="Trojan Fight" />
+      </div>
+      <div class="puzzle-box">
+        <!-- Quiz Questions -->
+        <label>1. "The Greeks entered Troy using a wooden horse."
+          <select id="q5">
+            <option value="">--Choose--</option>
+            <option value="Myth">Myth</option>
+            <option value="Fact">Fact</option>
+          </select>
+        </label>
+        <label>2. "Troy was destroyed around 1200 BCE by fire."
+          <select id="q6">
+            <option value="">--Choose--</option>
+            <option value="Myth">Myth</option>
+            <option value="Fact">Fact</option>
+          </select>
+        </label>
+        <label>3. "Gods frequently intervened in the war."
+          <select id="q7">
+            <option value="">--Choose--</option>
+            <option value="Myth">Myth</option>
+            <option value="Fact">Fact</option>
+          </select>
+        </label>
+        <label>4. "Wilusa is considered a Hittite reference to Troy."
+          <select id="q8">
+            <option value="">--Choose--</option>
+            <option value="Myth">Myth</option>
+            <option value="Fact">Fact</option>
+          </select>
+        </label>
+        <button onclick="checkAnswers2()">Check Answers</button>
+        <p id="result2"></p>
+      </div>
+    </div>
+
+    <!-- Puzzle 3 -->
+    <div class="section" id="puzzle3">
+      <h2>💭 Puzzle 3: Reflect & Analyze</h2>
+      <div class="article-box">
+        <p><strong>Quick Read:</strong> Understanding the Trojan War means examining both mythological and historical sources. Homer’s Iliad dramatizes a few weeks of the war, focusing on the hero Achilles and the gods’ influence. However, modern scholars use archaeological remains, ancient writings (like Hittite records), and later Greek histories to reconstruct what might have really happened. The discovery of multiple layers of destruction at the Troy site points to a city that was attacked more than once. This has led many historians to believe that the myths reflect a distant memory of real conflicts, though details were exaggerated over time. Now it’s your turn to reflect on the evidence and evaluate what we can truly know about the war.</p>
+      </div>
+      <div class="puzzle-box">
+        <label>1. What evidence supports the idea that Troy existed?</label>
+        <textarea id="question1" rows="3"></textarea>
+        <label>2. How does *The Iliad* portray the gods? Do historians agree?</label>
+        <textarea id="question2" rows="3"></textarea>
+        <label>3. Was the war as dramatic as in *The Iliad*? Why or why not?</label>
+        <textarea id="question3" rows="3"></textarea>
+        <button onclick="checkAnalysis()">Submit Answers</button>
+        <p id="analysisResult"></p>
+      </div>
+    </div>
+
+    <!-- Puzzle 4: Chronological Drag-and-Drop -->
+    <div class="section" id="puzzle4">
+      <h2>Puzzle 4: Chronological Order of Events</h2>
+      <div class="article-box">
+        <p>The Trojan War is made up of many key moments, both mythical and possibly historical. Here are some major events thought to be part of the tale: the judgment of Paris, the abduction of Helen, the Greeks' arrival at Troy, Achilles' battles, the Trojan Horse, and the city's fall. Can you place them in the correct order?</p>
+      </div>
+      <div class="puzzle-box">
+        <strong>Drag and Drop:</strong> Arrange the events in the correct chronological order.
+        <div class="drag-container" id="draggables">
+          <div class="draggable" draggable="true" data-order="1">Judgment of Paris</div>
+          <div class="draggable" draggable="true" data-order="2">Abduction of Helen</div>
+          <div class="draggable" draggable="true" data-order="3">Greek ships arrive at Troy</div>
+          <div class="draggable" draggable="true" data-order="4">Achilles kills Hector</div>
+          <div class="draggable" draggable="true" data-order="5">Trojans bring the wooden horse inside the city</div>
+          <div class="draggable" draggable="true" data-order="6">Fall of Troy</div>
+        </div>
+        <h4>Dropzone: Drop events here in correct order</h4>
+        <div class="dropzone" id="dropzone"></div>
+        <button onclick="checkOrder()">Check Order</button>
+        <p id="orderResult"></p>
+      </div>
+    </div>
+
+    <!-- 🎉 Win Screen -->
+    <div class="section" id="win">
+      <h2>🎉 You Escaped the Trojan War!</h2>
+      <p>Well done! You've uncovered the truth, challenged myths, and emerged victorious!</p>
+      <div class="confetti"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
